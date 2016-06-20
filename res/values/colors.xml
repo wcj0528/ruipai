@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navigation_bg">#DDDDDD</color>
+    <color name="driver_line">#cccccc</color>
+    <color name="mode_night_green">#8dd816</color>
+       <color name="white">#ffffffff</color>
+       <color name="gray">#e6e6e6</color>
+    <color name="blue">#11cd6e</color>
+    <color name="dark_gray">#8a8a8a</color>
+    <color name="orange">#e0620d</color>
+    <color name="red">#f00</color>
+    <color name="green">#72c542</color>
+    <color name="light_orange">#e0620d</color>
+    <color name="light_gray">#b0b0b0</color>
+</resources>

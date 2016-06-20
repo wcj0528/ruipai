@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/activity_user_layout_image_bg_ImageVIew"
+        android:layout_width="fill_parent"
+        android:layout_height="150.0dip"
+        android:background="@drawable/activity_user_layout_image_bg"
+        android:scaleType="fitCenter" />
+
+   <!--  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="20.0dip"
+        android:orientation="vertical" >
+
+        
+             <include
+            android:id="@+id/activity_user_layout_message_layout"
+            layout="@layout/activity_user_layout_weather" />
+       
+    </LinearLayout> -->
+
+    <!-- <LinearLayout
+        android:id="@+id/activity_user_layout_select_LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_user_layout_image_bg_ImageVIew"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20.0dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/activity_user_layout_sign_bg_ImageVIew"
+            android:layout_width="50.0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginRight="80.0dip"
+            android:background="@drawable/activity_user_layout_sign_bg" />
+
+        <ImageView
+            android:id="@+id/activity_user_layout_referee_bg_ImageVIew"
+            android:layout_width="50.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/activity_user_layout_referee_bg" />
+    </LinearLayout> -->
+
+    <ListView
+        android:id="@+id/activity_user_layout_listview"
+        style="@style/fragment_local_layout_RefreshListView"
+        android:layout_below="@id/activity_user_layout_image_bg_ImageVIew"
+        android:layout_marginTop="10.0dip" />
+
+    <ImageView
+        android:id="@+id/activity_user_layout_login_bg_ImageVIew"
+        android:layout_width="100.0dip"
+        android:layout_height="100.0dip"
+        android:layout_above="@+id/activity_user_layout_listview"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/activity_user_layout_login_bg" />
+
+</RelativeLayout>

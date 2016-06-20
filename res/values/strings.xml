@@ -4,5 +4,14 @@
     <string name="app_name">锐拍</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="login">登录</string>
+    <string name="zhanghao">账号</string>
+    <string name="password">密码</string>
+    <string name="wangjimima">忘记密码</string>
+    <string name="zidongdenglu">自动登录</string>
+    <string name="auth_success">授权成功</string>
+    <string name="auth_failure">授权失败</string>
+    <string name="auth_cancel">取消授权</string>
+    <string name="auth_deny">取消拒绝</string>
 
 </resources>
