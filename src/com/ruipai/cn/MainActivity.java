@@ -1,56 +1,44 @@
 package com.ruipai.cn;
 
+import android.app.ActivityGroup;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.view.Window;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.ruipai.cn.fragment.ContentFragment;
+import com.ruipai.cn.tool.Page;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends ActivityGroup {
 	/**
 	 * 主页面
-	 * 
 	 */
 	private long time;
-	private static final String FRAGMENT_CONTENT = "fragment_content";
-
+	private Page page;
+	private RadioButton but;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
-		initFragment();
+		
+		page = new Page(MainActivity.this, R.id.f);
+		
+		page.addpage("home", new Intent(MainActivity.this, HomeActivity.class),R.id.rb_home);
+		page.addpage("video", new Intent(MainActivity.this, VideoActivity.class),R.id.rb_video);
+		page.addpage("person", new Intent(MainActivity.this, PersonActivity.class),R.id.rb_person );
+		page.addpage("about", new Intent(MainActivity.this, AboutActivity.class),R.id.rb_about );
 
+		but = (RadioButton) findViewById(R.id.rb_home);
+		but.setChecked(true);
 	}
+
+	
+
 
 	/**
-	 * 初始化fragment, 将fragment数据填充给布局文件
-	 */
-	private void initFragment() {
-		FragmentManager fm = getSupportFragmentManager();
-		FragmentTransaction transaction = fm.beginTransaction();// 开启事务
-
-		// 用fragment替换framelayout
-		transaction.replace(R.id.fl_content, new ContentFragment(),
-				FRAGMENT_CONTENT);
-
-		transaction.commit();// 提交事务
-	}
-
-	// 获取主页面fragment
-	public ContentFragment getContentFragment() {
-		FragmentManager fm = getSupportFragmentManager();
-		ContentFragment fragment = (ContentFragment) fm
-				.findFragmentByTag(FRAGMENT_CONTENT);
-
-		return fragment;
-	}
-
-	/*
 	 * @作用：双击back键退出程序，间隔不超过2s
 	 */
 	@Override

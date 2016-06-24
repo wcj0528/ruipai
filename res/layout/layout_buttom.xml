@@ -1,15 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#fff"
-    android:orientation="vertical" >
-
-     <com.ruipai.cn.view.NoScrollViewPager
-        android:id="@+id/vp_content"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" /> 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    >
 
     <RadioGroup
         android:id="@+id/rg_group"
@@ -25,28 +19,30 @@
             android:text="首页" />
 
         <RadioButton
-            android:id="@+id/rb_news"
+            android:id="@+id/rb_video"
             style="@style/BottomTabStyle"
             android:drawableTop="@drawable/btn_tab_news_selector"
             android:text="视频管理" />
 
         <RadioButton
-            android:id="@+id/rb_smart"
+            android:id="@+id/rb_person"
             style="@style/BottomTabStyle"
             android:drawableTop="@drawable/btn_tab_smart_selector"
             android:text="个人中心" />
 
         <RadioButton
-            android:id="@+id/rb_gov"
+            android:id="@+id/rb_about"
             style="@style/BottomTabStyle"
             android:drawableTop="@drawable/btn_tab_gov_selector"
             android:text="关于我们" />
 
-       <!--  <RadioButton
+        <!--
+             <RadioButton
             android:id="@+id/rb_setting"
             style="@style/BottomTabStyle"
             android:drawableTop="@drawable/btn_tab_setting_selector"
-            android:text="设置" /> -->
+            android:text="设置" />
+        -->
     </RadioGroup>
 
 </LinearLayout>

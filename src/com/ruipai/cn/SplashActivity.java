@@ -15,9 +15,6 @@ import com.ruipai.cn.tool.PrefUtils;
 
 /**
  * 闪屏页
- * 
- * @author Kevin
- * 
  */
 public class SplashActivity extends Activity {
 

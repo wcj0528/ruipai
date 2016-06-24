@@ -1,24 +1,26 @@
 package com.ruipai.cn.base;
 
-import android.app.Activity;
-import android.graphics.Color;
-import android.view.Gravity;
-import android.widget.TextView;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
-public class VideoPager extends BasePager{
+import android.app.Activity;
+import android.view.View;
+
+import com.ruipai.cn.R;
+
+public class VideoPager extends BasePager {
 
 	public VideoPager(Activity activity) {
 		super(activity);
 	}
+
 	@Override
 	public void initData() {
-		TextView text = new TextView(mActivity);
-		text.setText("............video");
-		text.setTextColor(Color.RED);
-		text.setTextSize(25);
-		text.setGravity(Gravity.CENTER);
+		View videoPager = View.inflate(mActivity, R.layout.activity_homepager, null);
 
 		// 向FrameLayout中动态添加布局
-		flContent.addView(text);
+		flContent.addView(videoPager);
 	}
+
 }

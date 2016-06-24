@@ -215,4 +215,6 @@
         android:layout_toRightOf="@+id/textView1"
         android:src="@drawable/wx" />
 
+    
+
 </RelativeLayout>
